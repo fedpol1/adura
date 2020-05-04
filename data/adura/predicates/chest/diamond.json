@@ -1,0 +1,15 @@
+{
+    "condition": "entity_properties",
+	"entity": "this",
+	"predicate": 
+	{
+		"equipment": 
+		{
+			"chest": 
+			{
+				"item": "minecraft:diamond_chestplate",
+				"count": { "min": 1 }
+			}
+		}
+	}
+}

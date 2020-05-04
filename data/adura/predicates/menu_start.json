@@ -1,0 +1,26 @@
+{
+	"condition": "inverted",
+	"term":
+	{
+		"condition": "alternative",
+		"terms":
+		[
+			{
+				"condition": "inverted",
+				"term":
+				{
+					"condition": "reference",
+					"name": "adura:holding_armor"
+				}
+			},
+			{
+				"condition": "inverted",
+				"term":
+				{
+					"condition": "reference",
+					"name": "adura:sneaking"
+				}
+			}
+		]
+	}
+}

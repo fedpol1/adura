@@ -1,0 +1,36 @@
+{
+	"condition": "alternative",
+	"terms":
+	[
+		{
+			"condition": "entity_properties",
+			"entity": "this",
+			"predicate": 
+			{
+				"equipment": 
+				{
+					"mainhand": 
+					{
+						"tag": "adura:armor",
+						"count": { "min": 1 }
+					}
+				}
+			}
+		},
+		{
+			"condition": "entity_properties",
+			"entity": "this",
+			"predicate": 
+			{
+				"equipment": 
+				{
+					"offhand": 
+					{
+						"tag": "adura:armor",
+						"count": { "min": 1 }
+					}
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{"display":{"icon":{"item":"minecraft:elytra"},
+"title":{"text":"On Elytra Damage","color":"white"},
+"frame":"task",
+"description":[""],
+"show_toast":false,
+"announce_to_chat":false,
+"hidden":true},
+"parent":"adura:technical",
+"criteria":{"c1":{"trigger":"minecraft:item_durability_changed","conditions":{"delta":{"max":-1},"item":{"item":"minecraft:elytra"}}}},
+"rewards":{"function":"adura:on_elytra_damage"}}

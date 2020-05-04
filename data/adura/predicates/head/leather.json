@@ -1,0 +1,15 @@
+{
+    "condition": "entity_properties",
+	"entity": "this",
+	"predicate": 
+	{
+		"equipment": 
+		{
+			"head": 
+			{
+				"item": "minecraft:leather_helmet",
+				"count": { "min": 1 }
+			}
+		}
+	}
+}

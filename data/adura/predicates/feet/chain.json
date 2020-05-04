@@ -1,0 +1,15 @@
+{
+    "condition": "entity_properties",
+	"entity": "this",
+	"predicate": 
+	{
+		"equipment": 
+		{
+			"feet": 
+			{
+				"item": "minecraft:chainmail_boots",
+				"count": { "min": 1 }
+			}
+		}
+	}
+}

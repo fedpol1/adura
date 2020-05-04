@@ -1,0 +1,10 @@
+{"display":{"icon":{"item":"minecraft:clock"},
+"title":{"text":"Tick","color":"white"},
+"frame":"task",
+"description":[""],
+"show_toast":false,
+"announce_to_chat":false,
+"hidden":true},
+"parent":"adura:technical",
+"criteria":{"c1":{"trigger":"minecraft:tick"}},
+"rewards":{"function":"adura:advtick"}}

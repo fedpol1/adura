@@ -1,0 +1,10 @@
+{"display":{"icon":{"item":"minecraft:compass"},
+"title":{"text":"On Inventory Change","color":"white"},
+"frame":"task",
+"description":[""],
+"show_toast":false,
+"announce_to_chat":false,
+"hidden":true},
+"parent":"adura:technical",
+"criteria":{"c1":{"trigger":"minecraft:inventory_changed"}},
+"rewards":{"function":"adura:on_inventory_change"}}

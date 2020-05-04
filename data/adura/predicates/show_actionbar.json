@@ -1,0 +1,44 @@
+{
+	"condition": "alternative",
+	"terms":
+	[
+		{
+			"condition": "entity_scores",
+			"entity": "this",
+			"scores":
+			{
+				"adura.actionbar": 2
+			}
+		},
+		{
+			"condition": "inverted",
+			"term":
+			{
+				"condition": "alternative",
+				"terms":
+				[
+					{
+						"condition": "inverted",
+						"term":
+						{
+							"condition": "reference",
+							"name": "adura:sneaking"
+						}
+					},
+					{
+						"condition": "inverted",
+						"term":
+						{
+							"condition": "entity_scores",
+							"entity": "this",
+							"scores":
+							{
+								"adura.actionbar": 1
+							}
+						}
+					}
+				]
+			}
+		}
+	]
+}

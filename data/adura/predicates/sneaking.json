@@ -1,0 +1,8 @@
+{
+	"condition": "entity_scores",
+	"entity": "this",
+	"scores": 
+	{
+		"adura.sneak": 1
+	}
+}
