@@ -79,4 +79,4 @@ scoreboard players operation @s adura.p.legs *= $-1 adura.const
 scoreboard players operation @s adura.p.chest *= $-1 adura.const
 scoreboard players operation @s adura.p.head *= $-1 adura.const
 
-advancement revoke @s only adura:technical/on_inventory_change
+advancement revoke @s only adura:technical/on_armor_damage

@@ -1,6 +1,8 @@
 scoreboard players set @s adura.u.least 2147483647
 scoreboard players set @s adura.c.least 2147483647
 
+execute if entity @s[tag=adura.armor_damage] run function adura:advtick_armor_damage
+
 function adura:multiply_create
 function adura:multiply_threshold
 

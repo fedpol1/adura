@@ -1,0 +1,10 @@
+{"display":{"icon":{"item":"minecraft:netherite_boots"},
+"title":{"text":"On Armor Damage","color":"white"},
+"frame":"task",
+"description":[""],
+"show_toast":false,
+"announce_to_chat":false,
+"hidden":true},
+"parent":"adura:technical",
+"criteria":{"c1":{"trigger":"minecraft:item_durability_changed","conditions":{"item":{"tag":"adura:armor"}}}},
+"rewards":{"function":"adura:on_armor_damage"}}
