@@ -8,6 +8,7 @@ scoreboard objectives add adura.c.flasher dummy
 scoreboard objectives add adura.actionbar dummy
 scoreboard objectives add adura.urgent dummy
 scoreboard objectives add adura.caution dummy
+scoreboard objectives add adura.denom dummy
 scoreboard objectives add adura.logged dummy
 
 scoreboard objectives add adura.temp dummy
@@ -38,9 +39,9 @@ scoreboard objectives add adura.f.head dummy
 scoreboard players set $-1 adura.const -1
 scoreboard players set $1 adura.const 1
 scoreboard players set $3 adura.const 3
-scoreboard players set $5 adura.const 5
+scoreboard players set $6 adura.const 6
 scoreboard players set $10 adura.const 10
-execute unless score $denominator adura.const matches -2147483648.. run scoreboard players set $denominator adura.const 1000
+scoreboard players set $16 adura.const 16
 
 execute unless score $leather adura.m.feet matches -2147483648.. run scoreboard players set $leather adura.m.feet 65
 execute unless score $gold adura.m.feet matches -2147483648.. run scoreboard players set $gold adura.m.feet 91
