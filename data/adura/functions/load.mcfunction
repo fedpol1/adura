@@ -3,12 +3,16 @@ scoreboard objectives add adura.selected dummy
 scoreboard objectives add adura.page dummy
 scoreboard objectives add adura.time dummy
 
+scoreboard objectives add adura.actionbar dummy
 scoreboard objectives add adura.u.flasher dummy
 scoreboard objectives add adura.c.flasher dummy
-scoreboard objectives add adura.actionbar dummy
+scoreboard objectives add adura.a.frac dummy
+scoreboard objectives add adura.u.frac dummy
+scoreboard objectives add adura.c.frac dummy
 scoreboard objectives add adura.urgent dummy
 scoreboard objectives add adura.caution dummy
 scoreboard objectives add adura.denom dummy
+scoreboard objectives add adura.fracstyle dummy
 scoreboard objectives add adura.logged dummy
 
 scoreboard objectives add adura.temp dummy
@@ -31,9 +35,14 @@ scoreboard objectives add adura.f.feet dummy
 scoreboard objectives add adura.f.legs dummy
 scoreboard objectives add adura.f.chest dummy
 scoreboard objectives add adura.f.head dummy
+scoreboard objectives add adura.d.feet dummy
+scoreboard objectives add adura.d.legs dummy
+scoreboard objectives add adura.d.chest dummy
+scoreboard objectives add adura.d.head dummy
 
 # .m. -> master adura values
 # .p. -> per-player durability
+# .d. -> per-player displayed values
 # .f. -> per-player full durability armor
 
 scoreboard players set $-1 adura.const -1
@@ -41,7 +50,7 @@ scoreboard players set $1 adura.const 1
 scoreboard players set $3 adura.const 3
 scoreboard players set $6 adura.const 6
 scoreboard players set $10 adura.const 10
-scoreboard players set $16 adura.const 16
+scoreboard players set $13 adura.const 13
 
 execute unless score $leather adura.m.feet matches -2147483648.. run scoreboard players set $leather adura.m.feet 65
 execute unless score $gold adura.m.feet matches -2147483648.. run scoreboard players set $gold adura.m.feet 91
