@@ -25,6 +25,9 @@ execute if score @s adura.p.head <= $head_urgent adura.temp run data modify stor
 execute if score @s adura.p.head = @s adura.f.head run data modify storage adura:main temp.text.head set value '["",{"text":"H: ","color":"#bfbfbf"},{"score":{"name":"@s","objective":"adura.p.head"},"color":"#5fdf5f"}]'
 execute if score @s adura.p.head matches 0 run data modify storage adura:main temp.text.head set value '["",{"text":"H: ","color":"#bfbfbf"},{"score":{"name":"@s","objective":"adura.p.head"},"color":"#9f9f9f"}]'
 
-title @s actionbar ["",{"nbt":"temp.text.feet","storage":"adura:main","interpret":true},{"text":" "},{"nbt":"temp.text.legs","storage":"adura:main","interpret":true},{"text":" "},{"nbt":"temp.text.chest","storage":"adura:main","interpret":true},{"text":" "},{"nbt":"temp.text.head","storage":"adura:main","interpret":true}]
+execute if score @s adura.a.frac matches 0 run data modify storage adura:main temp.text.frac set value '""'
+execute if score @s adura.a.frac matches 1 run data modify storage adura:main temp.text.frac set value '["",{"text":"  (/","color":"#bfbfbf"},{"score":{"name":"@s","objective":"adura.denom"},"color":"#dfdfdf"},{"text":")","color":"#bfbfbf"}]'
+
+title @s actionbar ["",{"nbt":"temp.text.feet","storage":"adura:main","interpret":true},{"text":" "},{"nbt":"temp.text.legs","storage":"adura:main","interpret":true},{"text":" "},{"nbt":"temp.text.chest","storage":"adura:main","interpret":true},{"text":" "},{"nbt":"temp.text.head","storage":"adura:main","interpret":true},{"nbt":"temp.text.frac","storage":"adura:main","interpret":true}]
 
 function adura:multiply_reset
