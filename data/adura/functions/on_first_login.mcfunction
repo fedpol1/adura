@@ -14,7 +14,7 @@ scoreboard players operation @s adura.urgent *= $3 adura.const
 scoreboard players operation @s adura.urgent /= $13 adura.const
 
 scoreboard players operation @s adura.caution = @s adura.denom
-scoreboard players operation @s adura.caution *= $6 adura.const
+scoreboard players operation @s adura.caution *= $5 adura.const
 scoreboard players operation @s adura.caution /= $13 adura.const
 
 scoreboard players set @s adura.logged 1

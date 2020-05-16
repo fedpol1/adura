@@ -47,8 +47,9 @@ scoreboard objectives add adura.d.head dummy
 
 scoreboard players set $-1 adura.const -1
 scoreboard players set $1 adura.const 1
+scoreboard players set $2 adura.const 2
 scoreboard players set $3 adura.const 3
-scoreboard players set $6 adura.const 6
+scoreboard players set $5 adura.const 6
 scoreboard players set $10 adura.const 10
 scoreboard players set $13 adura.const 13
 

@@ -81,22 +81,13 @@ scoreboard players operation @s adura.p.head *= $-1 adura.const
 
 # Make fraction
 
-scoreboard players operation $denom adura.temp = @s adura.denom
-execute if score @s adura.fracstyle matches 0 run scoreboard players operation $denom adura.temp += @s adura.denom
+scoreboard players set $feet_helper adura.temp 0
+scoreboard players set $legs_helper adura.temp 0
+scoreboard players set $chest_helper adura.temp 0
+scoreboard players set $head_helper adura.temp 0
 
-scoreboard players operation $feet_helper adura.temp = @s adura.p.feet
-scoreboard players operation $legs_helper adura.temp = @s adura.p.legs
-scoreboard players operation $chest_helper adura.temp = @s adura.p.chest
-scoreboard players operation $head_helper adura.temp = @s adura.p.head
-
-scoreboard players operation $feet_helper adura.temp %= $denom adura.temp
-scoreboard players operation $legs_helper adura.temp %= $denom adura.temp
-scoreboard players operation $chest_helper adura.temp %= $denom adura.temp
-scoreboard players operation $head_helper adura.temp %= $denom adura.temp
-
-scoreboard players set $compare_helper adura.temp 1
-execute if score @s adura.fracstyle matches 2 run scoreboard players operation $compare_helper adura.temp = @s adura.denom
-execute if score @s adura.fracstyle matches 0 run scoreboard players operation $compare_helper adura.temp = @s adura.denom
+execute if score @s adura.fracstyle matches 1 run function adura:advtick_armor_damage_round_up
+execute if score @s adura.fracstyle matches 0 run function adura:advtick_armor_damage_round_nearest
 
 scoreboard players operation @s adura.d.feet = @s adura.p.feet
 scoreboard players operation @s adura.d.legs = @s adura.p.legs
@@ -113,16 +104,14 @@ scoreboard players operation @s adura.d.legs /= @s adura.f.legs
 scoreboard players operation @s adura.d.chest /= @s adura.f.chest
 scoreboard players operation @s adura.d.head /= @s adura.f.head
 
-execute if score $feet_helper adura.temp >= $compare_helper adura.temp run scoreboard players add @s adura.d.feet 1
-execute if score $legs_helper adura.temp >= $compare_helper adura.temp run scoreboard players add @s adura.d.legs 1
-execute if score $chest_helper adura.temp >= $compare_helper adura.temp run scoreboard players add @s adura.d.chest 1
-execute if score $head_helper adura.temp >= $compare_helper adura.temp run scoreboard players add @s adura.d.head 1
+scoreboard players operation @s adura.d.feet += $feet_helper adura.temp
+scoreboard players operation @s adura.d.legs += $legs_helper adura.temp
+scoreboard players operation @s adura.d.chest += $chest_helper adura.temp
+scoreboard players operation @s adura.d.head += $head_helper adura.temp
 
 scoreboard players reset $feet_helper adura.temp
 scoreboard players reset $legs_helper adura.temp
 scoreboard players reset $chest_helper adura.temp
 scoreboard players reset $head_helper adura.temp
-scoreboard players reset $compare_helper adura.temp
 
-tag @s remove adura.armor_damage
 advancement revoke @s only adura:technical/on_armor_damage
