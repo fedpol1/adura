@@ -42,7 +42,7 @@ scoreboard objectives add adura.d.head dummy
 
 # .m. -> master adura values
 # .p. -> per-player durability
-# .d. -> per-player displayed values
+# .d. -> per-player fractioned values
 # .f. -> per-player full durability armor
 
 scoreboard players set $-1 adura.const -1
