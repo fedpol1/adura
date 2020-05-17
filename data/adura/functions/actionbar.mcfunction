@@ -36,7 +36,9 @@ execute if score @s adura.p.head matches 0 run data modify storage adura:main te
 
 execute if score @s adura.a.frac matches 0 run data modify storage adura:main temp.text.frac set value '""'
 execute if score @s adura.a.frac matches 1 run data modify storage adura:main temp.text.frac set value '["",{"text":"  (/","color":"#bfbfbf"},{"score":{"name":"@s","objective":"adura.denom"},"color":"#dfdfdf"},{"text":")","color":"#bfbfbf"}]'
+execute if score @s adura.a.frac matches 1 if score @s adura.denom matches 100 run data modify storage adura:main temp.text.frac set value '["",{"text":"  (","color":"#bfbfbf"},{"text":"%","color":"#dfdfdf"},{"text":")","color":"#bfbfbf"}]'
 
 title @s actionbar ["",{"nbt":"temp.text.feet","storage":"adura:main","interpret":true},{"text":" "},{"nbt":"temp.text.legs","storage":"adura:main","interpret":true},{"text":" "},{"nbt":"temp.text.chest","storage":"adura:main","interpret":true},{"text":" "},{"nbt":"temp.text.head","storage":"adura:main","interpret":true},{"nbt":"temp.text.frac","storage":"adura:main","interpret":true}]
+data remove storage adura:main temp
 
 function adura:multiply_reset

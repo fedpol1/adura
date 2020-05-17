@@ -21,13 +21,15 @@
 	{
 		"c1":
 		{
-			"trigger":"minecraft:item_durability_changed",
+			"trigger":"minecraft:inventory_changed",
 			"conditions":
 			{
-				"item":
-				{
-					"tag":"adura:armor"
-				}
+				"items":
+				[
+					{
+						"tag":"adura:armor"
+					}
+				]
 			}
 		}
 	},
