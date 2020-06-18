@@ -38,7 +38,7 @@ execute if predicate adura:head/diamond run scoreboard players operation @s adur
 execute if predicate adura:head/netherite run scoreboard players operation @s adura.f.head = $netherite adura.m.head
 
 execute if predicate adura:chest/elytra run scoreboard players operation @s adura.f.chest = $elytra adura.m.chest
-execute if predicate adura:head/netherite run scoreboard players operation @s adura.f.head = $turtle adura.m.head
+execute if predicate adura:head/turtle run scoreboard players operation @s adura.f.head = $turtle adura.m.head
 
 execute unless score @s adura.p.feet matches -2147483648 if predicate adura:feet/leather run scoreboard players operation @s adura.p.feet -= $leather adura.m.feet
 execute unless score @s adura.p.feet matches -2147483648 if predicate adura:feet/gold run scoreboard players operation @s adura.p.feet -= $gold adura.m.feet
