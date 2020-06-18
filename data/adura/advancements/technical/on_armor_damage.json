@@ -31,8 +31,23 @@
 					}
 				]
 			}
+		},
+		"c2":
+		{
+			"trigger":"minecraft:item_durability_changed",
+			"conditions":
+			{
+				"item":
+				{
+					"tag":"adura:armor"
+				}
+			}
 		}
 	},
+	"requirements":
+	[
+		["c1","c2"]
+	],
 	"rewards":
 	{
 		"function":"adura:on_armor_damage"
